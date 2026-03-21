@@ -12254,7 +12254,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "18bae684-cbbf-477c-809b-e7b9246e7205")
 		(property "Reference" "SW2"
 			(at 201.93 83.8199 90)
@@ -12263,10 +12262,9 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
-		(property "Value" "USB Boot"
+		(property "Value" "UK-B0273-SP25Y"
 			(at 201.93 86.3599 90)
 			(effects
 				(font
@@ -12300,6 +12298,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Name" "USB Boot"
+			(at 206.502 88.392 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -15967,7 +15973,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1uF"
+		(property "Value" "100nF"
 			(at 283.464 80.01 0)
 			(effects
 				(font
