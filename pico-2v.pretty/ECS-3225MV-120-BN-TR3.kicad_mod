@@ -85,4 +85,15 @@
 		(uuid "27e07108-b7ee-4ed0-bd06-0de989ce37d0")
 	)
 	(embedded_fonts no)
+	(model "${KIPRJMOD}/pico-2v.pretty/ECS-3225MV-120-BN-TR3.step"
+		(offset
+			(xyz 0 0 -0.055)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
 )
