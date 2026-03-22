@@ -13,7 +13,7 @@ Pico 2V is an [RP2350](https://www.raspberrypi.com/products/rp2350) development 
 
 ![Pico 2V Pinout](./doc/pinout.png)
 
-* The GPIO pin headers are pin-compatible with [the official Pico 2](https://www.raspberrypi.com/documentation/microcontrollers/images/pico-2-r4-pinout.svg), and the dimensions of Pico 2V are the same as the official Pico 2, so you can easily swap out a Pico 2 on your breadboard for a Pico 2V. However, note that the `3V3(OUT)` pin is actually the output of the selected voltage, so it is instead a `VDD(OUT)` pin, and the `3V3_EN` pin is left floating on Pico 2V.
+* The GPIO pin headers are pin-compatible with [the official Pico 2](https://www.raspberrypi.com/documentation/microcontrollers/images/pico-2-r4-pinout.svg), and the dimensions of Pico 2V are the same as the official Pico 2, so you can easily swap out an existing Pico 2 on your breadboard for a Pico 2V. However, note that the `3V3(OUT)` pin is actually the output of the selected voltage, so it is instead a `VDD(OUT)` pin, which is only powered when a jumper is fitted to the voltage selector header. Additionally, the `3V3_EN` pin is left floating on Pico 2V.
 * GPIO29 (which is not broken out/usable on the official Pico 2) is wired to an on-board voltage comparator, so you can detect from your firmware whether the RP2354A is operating at 3.3V or 1.8V by reading the value of GPIO29 (GPIO29 logic level high indicates 3.3V, logic level low indicates 1.8V). 
 * The user LED is connected to GPIO25, just like on the official Pico 2.
 * Pressing the `RESET` button will tie the `RUN` pin to ground.
@@ -28,7 +28,7 @@ Pico 2V is an [RP2350](https://www.raspberrypi.com/products/rp2350) development 
   * Pin 8: `SD0`/`MOSI`
   * Note that the pin numbering convention here is different from the standard SOIC-8 pin numbering convention. This is a bug with the labeling on the PCB (the '5' and '8' markers should be swapped on the PCB) that will be fixed in rev 1. However, the positions of the pins themselves does match the SOIC-8 layout; the issue is simply in the labeling of the numbers on the PCB.
 
-## How can I a Pico 2V?
+## How can I buy a Pico 2V?
 
 Fabrication exports are in the `fab/rev0` directory. I had the board produced by [JLCPCB](https://jlcpcb.com). To have JLCPCB produce some boards for you to have, zip all the files in the `fab/rev0` directory and provide the ZIP file to JLCPCB. I used Lead-Free HASL as the surface finish and a PCB thickness of 1mm. If you want them to assembly the components onto the board as well, provide them the BOM and CPL files in `fab/rev0/smt/pico-2v-bom.xls` and `fab/rev0/smt/pico-2v-all-pos.csv` respectively. Note that the GPIO and QSPI headers are not included in the BOM file, but the voltage selection header is; you can select or remove these as you desire.
 
